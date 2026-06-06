@@ -6,8 +6,12 @@ import com.example.habittrackerbackend.entity.*;
 
 @RestController
 @RequestMapping("/Gym")
-@CrossOrigin(origins = "http://localhost:5173")
-
+@CrossOrigin(
+	    origins = {
+	        "http://localhost:5173",
+	        "https://habit-tracker-frontend-x1li.onrender.com"
+	    }
+	)
 public class GymRecordController {
 	private final GymRecordService Service; 
 	public GymRecordController(GymRecordService Service) {

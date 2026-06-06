@@ -21,8 +21,12 @@ import com.example.habittrackerbackend.entity.PrayerRecord;
 import com.example.habittrackerbackend.Service.PrayerRecordService;
 @RestController
 @RequestMapping("/prayers")//this is the base url for the whole controller ; 
-@CrossOrigin(origins = "http://localhost:5173")
-
+@CrossOrigin(
+	    origins = {
+	        "http://localhost:5173",
+	        "https://habit-tracker-frontend-x1li.onrender.com"
+	    }
+	)
 public class PrayerRecordController {
 	private final PrayerRecordService service; 
 	public PrayerRecordController(PrayerRecordService service) {
